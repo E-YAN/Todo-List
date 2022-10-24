@@ -1,0 +1,292 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Cursive", Arial, Helvetica, sans-serif;
+    font-weight:bold ;
+  }
+  
+  body {
+    background-image: url("./images/tado-background.jpg") ;
+    background-repeat: no-repeat;
+    background-position:bottom;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #0e0f0c;
+   
+  }
+  
+  .App {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .todoHeader  {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #f7e579;
+    text-shadow: 5px -5px 8px #3a1f49;
+  }
+  
+  .addTodos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    
+    
+  }
+  
+  
+  .todo-input {
+    min-width: 15rem;
+    width: 50vw;
+    max-height: 2.5rem;
+    background-color: #e1ebfd;
+    border:none;
+    border-radius: 5px;
+    padding: 1rem 1rem;
+    align-self: center;
+    margin-bottom: 20px;
+  }
+  .deadlineDiv
+  {
+    min-width: 15rem;
+    width: 50vw;
+    /* max-height: 2.5rem; */
+    background-color: #e1ebfd;
+    color: #5d446b;
+    border:none;
+    border-radius: 5px;
+    padding: 0.7rem 0.8rem;
+    align-self: center;
+    margin-bottom: 20px;
+    font-size: small;
+  }
+  .deadlineInput
+  {
+    
+   
+    background-color: #e1ebfd;
+    border:none;
+    /* margin: auto; */
+    text-align: center;
+    padding-left: 20% ;
+    
+    
+  }
+
+  .todo-input:focus {
+    outline: none;
+    border: 2px solid rgb(67, 58, 168);
+  }
+  
+  .add-btn {
+    
+    background-color: #5d446b;
+    color: #e1ebfd;
+    border-radius: 20px;
+    border: 1px solid #f7e579;
+    font-size: 1rem;
+    
+    cursor: pointer;
+    box-shadow: 2px -4px 10px #623b79;
+    
+    margin:0  25% 0 25%;
+    Padding: 5px 50px 5px 50px ;
+  
+  }
+  
+  .add-btn:focus {
+    outline: none;
+  }
+  
+  .displaytodos {
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .displaytodos .buttons{
+    
+    display:flex ;
+    justify-content: center;
+    flex-direction:row;
+    align-items: center;
+    flex-wrap:wrap;
+    padding: 15px;
+    width:90%;
+    height:90% ;
+    margin-top: -10px ;
+  }
+ 
+  .displaytodos .buttons button {
+    padding: 0.5rem 1.2rem;
+    border-radius: 20px;
+    cursor: pointer;
+    border: none;
+    width: 150px;
+    margin: 5PX;
+  }
+  
+  .displaytodos .buttons button:focus {
+    outline: none;
+    background-color: #5d446b;
+    color: #e1ebfd;
+  }
+  #deleteAll:focus ,#deleteAll:hover {
+    outline: none;
+    background-color: #ab3659bb;
+    color: #e1ebfd;
+  }
+   
+  
+  .displaytodos ul {
+    display:flex ;
+    justify-content: center;
+    flex-direction:row;
+    align-items: center;
+    flex-wrap:wrap;
+    padding: 15px;
+    width:90%;
+    height:90% ;
+    margin-top: -15px ;
+   
+    
+  }
+  
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    background: radial-gradient(
+      hsla(237, 34%, 78%, 0.9) 0%,
+      hsla(219, 88%, 94%, 0.9) 100%
+    );
+  
+    margin: 8px;
+    height: 8rem;
+    width: 18rem;
+    border-radius: 0.5rem;
+    border: 1px solid #dfe56c;
+    
+    padding: 1rem;
+    position:relative;
+    overflow: auto;
+  }
+   .card h3  {
+    font-weight: bold ;
+    text-align: left;
+    margin: auto;
+
+    color: #f7e579;
+    text-shadow: 2px -3px 10px  #623b79;
+  }
+  .userNameStyle {
+    font-weight: bold ;
+    text-align: left;
+    margin-left: 15px;
+    margin-top: 8px;
+    color: #f7e579;
+    text-shadow: 2px -3px 10px  #623b79;
+  }
+
+  
+  .card textarea {
+    padding: 0.5rem;
+    border-radius: 8px;
+    border: none;
+    background-color: #e1ebfd;
+  
+    color: #5d446b;
+    height: 65%;
+  }
+  .card textarea:disabled {
+    background-color: transparent;
+  }
+  
+  .card .btns {
+    position: absolute;
+    bottom: 10px;
+    right: 8px;
+  }
+  
+  .card .btns button {
+    border-radius: 20%;
+    border: none;
+    margin: 0 0.6rem;
+    font-size: 1.4rem;
+    cursor: pointer;
+    color: #5d446b;
+    background-color: transparent;
+  }
+  
+  .card .btns button:focus {
+   outline: none ;
+  }
+  
+  .completed  {
+    position: absolute;
+    right: 0.7rem;
+    top: 0.7rem;
+    background-color:  #5d446b;
+    color: #e1ebfd;
+    font-size: 0.8rem;
+    padding: 0.3rem 1rem;
+    border-radius: 10px;
+  }
+  .deadline {
+    position: absolute;
+    right: 0rem;
+    top: 0.5rem;
+    color:  #5d446b;
+    text-shadow: 1px 0.5px 10px  #ea080893;
+    font-size: 0.8rem;
+    padding: 0.3rem 1rem;
+    
+  }
+  .today {
+    
+    
+    color: #5d446b;
+    font-size: 0.8rem;
+    padding: 0.3rem 0.5rem;
+    
+  }
+  
+  @media Screen and (max-width: 640px) {
+    .buttons button{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom:10px ;
+      align-self: center;
+    }
+   .displaytodos ul  {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-left: 0;
+      align-self: center;
+      margin: auto;
+    }
+    .card {
+      margin-right: 0;
+      
+      
+      
+    }
+    
+  .deadlineInput
+  {
+    
+   
+
+    padding-left: 0px;
+    
+    
+  }
+  }
+  
